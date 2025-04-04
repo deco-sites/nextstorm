@@ -13,6 +13,12 @@
       }
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/BannerCarouselWithVideo.tsx"
+      }
+    },
+    {
       "__resolveType": "site/sections/Hero.tsx",
       "title": "<p>Click here to tweak this text however you want.</p>",
       "cta": [],
@@ -40,12 +46,6 @@
     },
     {
       "__resolveType": "Footer"
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/BannerCarouselWithVideo.tsx"
-      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

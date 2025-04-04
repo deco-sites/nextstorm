@@ -1,1 +1,33 @@
-{"__resolveType":"site/sections/Header.tsx","navigation":{"links":[],"buttons":[]}}
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "navigation": {
+    "links": [
+      {
+        "label": "Quem Somos",
+        "url": "#"
+      },
+      {
+        "label": "Soluções",
+        "url": "#"
+      },
+      {
+        "label": "Cases",
+        "url": "#"
+      },
+      {
+        "label": "Blog"
+      }
+    ],
+    "buttons": [
+      {
+        "id": "whatsapp",
+        "href": "/#",
+        "text": "(21) 981026507",
+        "outline": true
+      }
+    ]
+  },
+  "logo": {
+    "src": "https://assets.decocache.com/nextstorm/cf62921e-feff-460b-8c84-3cbfec29c55c/Screenshot_14.png"
+  }
+}
