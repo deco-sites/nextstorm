@@ -1,6 +1,5 @@
 import type { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import Video from "apps/website/components/Video.tsx";
 
 export interface CTA {
   id?: string;
