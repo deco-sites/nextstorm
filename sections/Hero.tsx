@@ -1,5 +1,6 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import Video from "apps/website/components/Video.tsx";
 
 export interface CTA {
   id?: string;
@@ -19,6 +20,7 @@ export interface Props {
    */
   description?: string;
   image?: ImageWidget;
+  video?: VideoWidget;
   placement?: "left" | "right";
   cta?: CTA[];
 }
@@ -31,8 +33,9 @@ const PLACEMENT = {
 export default function HeroFlats({
   title = "Click here to tweak this text however you want.",
   description =
-    "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
+  "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
   image,
+  video,
   placement = "left",
   cta = [
     { id: "change-me-1", href: "/", text: "Change me", outline: false },
@@ -40,14 +43,31 @@ export default function HeroFlats({
   ],
 }: Props) {
   return (
-    <nav class="lg:container lg:mx-auto mx-4">
-      <div class="flex flex-col items-center gap-8">
+    <nav class="relative">
+      {video && <video
+        loading="eager"
+        autoPlay
+        muted
+        loop
+        id="heroVideo"
+        className={`w-full absolute top-0 right-0 object-cover h-full `}
+      >
+        <source
+          src={video}
+          media="(min-width: 1024px)"
+        />
+        <source
+          src={video}
+          media="(max-width: 1023px)"
+        />
+      </video>
+      }
+      <div class="lg:container lg:mx-auto mx-4 flex flex-col items-center gap-8">
         <div
-          class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
-            image
-              ? PLACEMENT[placement]
-              : "flex-col items-center justify-center text-center"
-          } lg:py-36 gap-12 md:gap-20 items-center`}
+          class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${image
+            ? PLACEMENT[placement]
+            : "flex-col items-center justify-center text-center"
+            } lg:py-36 gap-12 md:gap-20 items-center`}
         >
           {image && (
             <Image
@@ -61,11 +81,10 @@ export default function HeroFlats({
             />
           )}
           <div
-            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${
-              image
-                ? "lg:w-1/2 lg:max-w-xl"
-                : "flex flex-col items-center justify-center lg:max-w-3xl"
-            }`}
+            class={`mx-6 lg:mx-auto lg:w-full space-y-4 gap-4 ${image
+              ? "lg:w-1/2 lg:max-w-xl"
+              : "flex flex-col items-center justify-center lg:max-w-3xl"
+              }`}
           >
             <div
               class="inline-block lg:text-[80px] text-4xl leading-none font-medium"
@@ -84,9 +103,8 @@ export default function HeroFlats({
                   id={item?.id}
                   href={item?.href}
                   target={item?.href.includes("http") ? "_blank" : "_self"}
-                  class={`font-normal btn btn-primary ${
-                    item.outline && "btn-outline"
-                  }`}
+                  class={`font-normal btn btn-primary ${item.outline && "btn-outline"
+                    }`}
                 >
                   {item?.text}
                 </a>
