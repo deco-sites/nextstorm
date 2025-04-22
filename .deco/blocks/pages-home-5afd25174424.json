@@ -10,12 +10,22 @@
       "title": "<p><strong><span style=\"color: rgb(1, 239, 41); font-size: 29pt\">Estratégias de comunicação e marketing que impulsionam o seu negócio.</span></strong></p>",
       "cta": [
         {
-          "href": "#",
-          "text": "Botao"
+          "href": "#orcamento",
+          "text": "Solicite seu orçamento"
         }
       ],
       "video": "https://assets.decocache.com/nextstorm/e263324e-07ee-4743-af2f-da4e7aa3cfc9/Video-Banner-site-CMLO-home2.mp4",
-      "description": "Descrição aqui"
+      "cards": [
+        {
+          "text": "MARKETING DIGITAL"
+        },
+        {
+          "text": "DESIGN E CRIAÇÃO"
+        },
+        {
+          "text": "PRODUÇÃO AUDIOVISUAL"
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Logos.tsx",
@@ -26,7 +36,18 @@
         {
           "src": "https://assets.decocache.com/nextstorm/a3ab96b5-69d5-4303-93a2-5e4472566771/logo-2.png"
         },
-        {}
+        {
+          "src": "https://assets.decocache.com/nextstorm/573d0ec5-f489-46b0-8e9c-d7e49d22dc70/Screenshot_2.png"
+        },
+        {
+          "src": "https://assets.decocache.com/nextstorm/a3ab96b5-69d5-4303-93a2-5e4472566771/logo-2.png"
+        },
+        {
+          "src": "https://assets.decocache.com/nextstorm/573d0ec5-f489-46b0-8e9c-d7e49d22dc70/Screenshot_2.png"
+        },
+        {
+          "src": "https://assets.decocache.com/nextstorm/a3ab96b5-69d5-4303-93a2-5e4472566771/logo-2.png"
+        }
       ],
       "title": "LOGOS"
     },
@@ -53,7 +74,30 @@
       "placement": "right",
       "title": "Quem somos?",
       "description": "No cenário digital, ser apenas mais um não é uma opção. Nós somos a Nexstorm, uma agência especializada em marketing, design e produção audiovisual, pronta para elevar sua marca a outro nível.\n\nAcreditamos que cada negócio tem uma história única para contar, e nosso trabalho é transformar essa história em estratégias visuais e digitais que conectam, engajam e convertem.\n\nCriatividade e Estratégia – Unimos inovação e análise para entregar soluções que fazem a diferença.\n\nFoco em Resultados – Não basta ser bonito, tem que ser eficiente. Cada projeto é guiado por dados e performance.\n\nCompromisso com Sua Marca – Trabalhamos lado a lado com você para potencializar sua presença no mercado.\n\nSe você busca um time que pensa fora da caixa e entrega soluções personalizadas, vamos juntos transformar sua visão em realidade!\n\nFale conosco e descubra como podemos impulsionar o seu negócio.",
-      "image": "https://assets.decocache.com/nextstorm/cf62921e-feff-460b-8c84-3cbfec29c55c/Screenshot_14.png"
+      "image": "https://assets.decocache.com/nextstorm/cf62921e-feff-460b-8c84-3cbfec29c55c/Screenshot_14.png",
+      "id": "quemsomos"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/OurServices.tsx",
+        "title": "Nossos serviços",
+        "subTitle": "Oferecemos soluções completas para alavancar a presença digital da sua marca. Explore nossos serviços abaixo: ",
+        "textItems": [
+          {
+            "title": "Marketing Digital",
+            "context": "Teste"
+          },
+          {
+            "title": "Design e Criação",
+            "context": "Teste2"
+          },
+          {
+            "title": "Produção Audiovisual",
+            "context": "Test3"
+          }
+        ]
+      }
     },
     {
       "__resolveType": "site/sections/BlogPosts.tsx",
@@ -96,6 +140,13 @@
       "title": "O que dizem nossos clientes"
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/budgetShow.tsx",
+        "video": "https://assets.decocache.com/nextstorm/e263324e-07ee-4743-af2f-da4e7aa3cfc9/Video-Banner-site-CMLO-home2.mp4"
+      }
+    },
+    {
       "__resolveType": "site/sections/Faq.tsx",
       "questions": [
         {
@@ -117,14 +168,21 @@
       ],
       "cta": {
         "href": "#",
-        "text": "v",
-        "outline": true
+        "text": "Entre no FAQ",
+        "outline": false
       },
       "title": "Tire suas dúvidas mais comuns sobre nossos serviços. Se ainda tiver perguntas, entre em contato com a gente!",
-      "description": "."
+      "description": " "
     },
     {
       "__resolveType": "Footer"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/WhatsApp.tsx",
+        "phone": 22999999
+      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

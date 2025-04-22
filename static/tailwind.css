@@ -456,20 +456,20 @@ video {
 html {
   -webkit-tap-highlight-color: transparent;
 }
-
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
+    scroll-behavior: smooth;
   }
 
   /** Remove default styles from input[type=number] */
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
 
-  input[type=number] {
+  input[type="number"] {
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
             appearance: textfield;
@@ -852,6 +852,62 @@ html {
   border-width: 1px;
   border-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-border-opacity)));
   --tw-border-opacity: 0.2;
+}
+.collapse:not(td):not(tr):not(colgroup) {
+  visibility: visible;
+}
+.collapse {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: auto 0fr;
+  transition: grid-template-rows 0.2s;
+  width: 100%;
+  border-radius: var(--rounded-box, 1rem);
+}
+.collapse-title,
+.collapse > input[type="checkbox"],
+.collapse > input[type="radio"],
+.collapse-content {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.collapse > input[type="checkbox"],
+.collapse > input[type="radio"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  opacity: 0;
+}
+.collapse-content {
+  visibility: hidden;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  min-height: 0px;
+  transition: visibility 0.2s;
+  transition: padding 0.2s ease-out,
+    background-color 0.2s ease-out;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: unset;
+}
+.collapse[open],
+.collapse-open,
+.collapse:focus:not(.collapse-close) {
+  grid-template-rows: auto 1fr;
+}
+.collapse:not(.collapse-close):has(> input[type="checkbox"]:checked),
+.collapse:not(.collapse-close):has(> input[type="radio"]:checked) {
+  grid-template-rows: auto 1fr;
+}
+.collapse[open] > .collapse-content,
+.collapse-open > .collapse-content,
+.collapse:focus:not(.collapse-close) > .collapse-content,
+.collapse:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-content,
+.collapse:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-content {
+  visibility: visible;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 .divider {
   display: flex;
@@ -1823,6 +1879,115 @@ html {
     background-position-y: 0;
   }
 }
+details.collapse {
+  width: 100%;
+}
+details.collapse summary {
+  position: relative;
+  display: block;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+details.collapse summary::-webkit-details-marker {
+  display: none;
+}
+.collapse:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: var(--fallback-bc,oklch(var(--bc)/1));
+}
+.collapse:has(.collapse-title:focus-visible),
+.collapse:has(> input[type="checkbox"]:focus-visible),
+.collapse:has(> input[type="radio"]:focus-visible) {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: var(--fallback-bc,oklch(var(--bc)/1));
+}
+.collapse-arrow > .collapse-title:after {
+  position: absolute;
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  --tw-translate-y: -100%;
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.2s;
+  top: 50%;
+  inset-inline-end: 1.4rem;
+  content: "";
+  transform-origin: 75% 75%;
+  box-shadow: 2px 2px;
+  pointer-events: none;
+}
+.collapse-plus > .collapse-title:after {
+  position: absolute;
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 300ms;
+  top: 0.9rem;
+  inset-inline-end: 1.4rem;
+  content: "+";
+  pointer-events: none;
+}
+.collapse:not(.collapse-open):not(.collapse-close) > input[type="checkbox"],
+.collapse:not(.collapse-open):not(.collapse-close) > input[type="radio"]:not(:checked),
+.collapse:not(.collapse-open):not(.collapse-close) > .collapse-title {
+  cursor: pointer;
+}
+.collapse:focus:not(.collapse-open):not(.collapse-close):not(.collapse[open]) > .collapse-title {
+  cursor: unset;
+}
+.collapse-title {
+  position: relative;
+}
+:where(.collapse > input[type="checkbox"]),
+:where(.collapse > input[type="radio"]) {
+  z-index: 1;
+}
+.collapse-title,
+:where(.collapse > input[type="checkbox"]),
+:where(.collapse > input[type="radio"]) {
+  width: 100%;
+  padding: 1rem;
+  padding-inline-end: 3rem;
+  min-height: 3.75rem;
+  transition: background-color 0.2s ease-out;
+}
+.collapse[open] > :where(.collapse-content),
+.collapse-open > :where(.collapse-content),
+.collapse:focus:not(.collapse-close) > :where(.collapse-content),
+.collapse:not(.collapse-close) > :where(input[type="checkbox"]:checked ~ .collapse-content),
+.collapse:not(.collapse-close) > :where(input[type="radio"]:checked ~ .collapse-content) {
+  padding-bottom: 1rem;
+  transition: padding 0.2s ease-out,
+    background-color 0.2s ease-out;
+}
+.collapse[open].collapse-arrow > .collapse-title:after,
+.collapse-open.collapse-arrow > .collapse-title:after,
+.collapse-arrow:focus:not(.collapse-close) > .collapse-title:after,
+.collapse-arrow:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after,
+.collapse-arrow:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
+  --tw-translate-y: -50%;
+  --tw-rotate: 225deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.collapse[open].collapse-plus > .collapse-title:after,
+.collapse-open.collapse-plus > .collapse-title:after,
+.collapse-plus:focus:not(.collapse-close) > .collapse-title:after,
+.collapse-plus:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after,
+.collapse-plus:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
+  content: "−";
+}
 .divider:not(:empty) {
   gap: 1rem;
 }
@@ -2260,6 +2425,12 @@ html {
 .tab-border {
   --tab-border: 1px;
 }
+.artboard.\!phone {
+  width: 320px !important;
+}
+.artboard.phone {
+  width: 320px;
+}
 .badge-lg {
   height: 1.5rem;
   font-size: 1rem;
@@ -2469,7 +2640,7 @@ html {
     background-color: black;
   }
 [data-dot] div .dot {
-    background-color: #E4E4E7;
+    background-color: #e4e4e7;
   }
 .sr-only {
   position: absolute;
@@ -2482,8 +2653,14 @@ html {
   white-space: nowrap;
   border-width: 0;
 }
+.collapse {
+  visibility: collapse;
+}
 .static {
   position: static;
+}
+.fixed {
+  position: fixed;
 }
 .absolute {
   position: absolute;
@@ -2493,6 +2670,9 @@ html {
 }
 .bottom-0 {
   bottom: 0px;
+}
+.bottom-6 {
+  bottom: 1.5rem;
 }
 .left-0 {
   left: 0px;
@@ -2506,6 +2686,9 @@ html {
 .right-4 {
   right: 1rem;
 }
+.right-6 {
+  right: 1.5rem;
+}
 .top-0 {
   top: 0px;
 }
@@ -2514,6 +2697,12 @@ html {
 }
 .z-10 {
   z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 30;
 }
 .z-50 {
   z-index: 50;
@@ -2631,6 +2820,12 @@ html {
 .h-\[210px\] {
   height: 210px;
 }
+.h-\[280px\] {
+  height: 280px;
+}
+.h-\[450px\] {
+  height: 450px;
+}
 .h-full {
   height: 100%;
 }
@@ -2683,6 +2878,9 @@ html {
 .w-80 {
   width: 20rem;
 }
+.w-\[200px\] {
+  width: 200px;
+}
 .w-\[316px\] {
   width: 316px;
 }
@@ -2734,6 +2932,9 @@ html {
 }
 .max-w-6xl {
   max-width: 72rem;
+}
+.max-w-\[1024px\] {
+  max-width: 1024px;
 }
 .max-w-\[139px\] {
   max-width: 139px;
@@ -2988,6 +3189,9 @@ html {
 .rounded-md {
   border-radius: 0.375rem;
 }
+.rounded-xl {
+  border-radius: 0.75rem;
+}
 .rounded-l {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -3024,15 +3228,29 @@ html {
 .border-2 {
   border-width: 2px;
 }
+.border-\[1px\] {
+  border-width: 1px;
+}
 .border-b {
   border-bottom-width: 1px;
 }
 .border-t {
   border-top-width: 1px;
 }
+.border-solid {
+  border-style: solid;
+}
+.border-base-300 {
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-border-opacity)));
+}
 .border-base-content {
   --tw-border-opacity: 1;
   border-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-border-opacity)));
+}
+.border-green-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 .border-primary {
   --tw-border-opacity: 1;
@@ -3045,6 +3263,10 @@ html {
 .border-transparent {
   border-color: transparent;
 }
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
 .bg-\[var\(--bg-color\)\] {
   background-color: var(--bg-color);
 }
@@ -3055,6 +3277,10 @@ html {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 .bg-secondary {
   --tw-bg-opacity: 1;
@@ -3116,6 +3342,10 @@ html {
 .p-8 {
   padding: 2rem;
 }
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -3144,9 +3374,9 @@ html {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .py-3 {
   padding-top: 0.75rem;
@@ -3210,6 +3440,9 @@ html {
 .pt-8 {
   padding-top: 2rem;
 }
+.pt-\[100px\] {
+  padding-top: 100px;
+}
 .text-left {
   text-align: left;
 }
@@ -3219,6 +3452,10 @@ html {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-4xl {
   font-size: 2.25rem;
@@ -3308,8 +3545,8 @@ html {
 .leading-\[22px\] {
   line-height: 22px;
 }
-.leading-none {
-  line-height: 1;
+.leading-\[30px\] {
+  line-height: 30px;
 }
 .leading-normal {
   line-height: 1.5;
@@ -3341,6 +3578,14 @@ html {
 .text-base-content {
   --tw-text-opacity: 1;
   color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 .text-primary {
   --tw-text-opacity: 1;
@@ -3570,6 +3815,11 @@ html {
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -3696,8 +3946,18 @@ html {
     padding-top: 7rem;
   }
 
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .lg\:text-\[80px\] {
     font-size: 80px;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 @media (min-width: 1280px) {

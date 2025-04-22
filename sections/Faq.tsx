@@ -21,7 +21,7 @@ export interface Props {
 export default function BlogPosts({
   title = "FAQs",
   description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
   cta = { id: "change-me", href: "/", text: "Change me", outline: true },
   questions = [
     {
@@ -52,7 +52,7 @@ export default function BlogPosts({
   ],
 }: Props) {
   return (
-    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-12 lg:py-28">
+    <div id="faq" class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-12 lg:py-28">
       <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-between">
         <div class="flex-none space-y-6 lg:w-2/5">
           <p class="text-4xl leading-snug">
@@ -66,9 +66,8 @@ export default function BlogPosts({
             id={cta?.id}
             href={cta?.href}
             target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class={`font-normal btn btn-primary ${
-              cta.outline && "btn-outline"
-            }`}
+            class={`font-normal btn btn-primary ${cta.outline && "btn-outline"
+              } border-white text-white`}
           >
             {cta?.text}
           </a>

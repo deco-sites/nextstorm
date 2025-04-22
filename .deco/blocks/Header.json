@@ -4,28 +4,22 @@
     "links": [
       {
         "label": "Quem Somos",
-        "url": "#"
+        "url": "#quemsomos"
       },
       {
-        "label": "Soluções",
-        "url": "#"
+        "label": "Serviços",
+        "url": "#services"
       },
       {
-        "label": "Cases",
-        "url": "#"
+        "label": "FAQ",
+        "url": "#faq"
       },
       {
-        "label": "Blog"
+        "label": "Blog",
+        "url": "#posts"
       }
     ],
-    "buttons": [
-      {
-        "id": "whatsapp",
-        "href": "/#",
-        "text": "(21) 981026507",
-        "outline": true
-      }
-    ]
+    "buttons": []
   },
   "logo": {
     "src": "https://assets.decocache.com/nextstorm/cf62921e-feff-460b-8c84-3cbfec29c55c/Screenshot_14.png"

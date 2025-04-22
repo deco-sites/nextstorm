@@ -43,13 +43,13 @@ export default function Header({
   },
 }: Nav) {
   return (
-    <nav class="drawer drawer-end">
+    <nav class="drawer drawer-end bg-black fixed top-0 z-20">
       <input id="mobile-drawer-nav" type="checkbox" class="drawer-toggle" />
 
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
         <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
+          <Image src={logo.src || ""} width={100} height={76} alt={logo.alt} />
         </a>
 
         <div class="hidden items-center justify-between lg:flex w-full">
@@ -73,9 +73,8 @@ export default function Header({
                 id={item?.id}
                 href={item?.href ?? "#"}
                 target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
-                }`}
+                class={`font-normal btn btn-primary ${item.outline && "btn-outline"
+                  }`}
               >
                 {item?.text}
               </a>
@@ -127,9 +126,8 @@ export default function Header({
                 id={item?.id}
                 href={item?.href ?? "#"}
                 target={item?.href.includes("http") ? "_blank" : "_self"}
-                class={`font-normal btn btn-primary ${
-                  item.outline && "btn-outline"
-                }`}
+                class={`font-normal btn btn-primary ${item.outline && "btn-outline"
+                  }`}
               >
                 {item?.text}
               </a>
