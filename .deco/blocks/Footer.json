@@ -1,1 +1,53 @@
-{"__resolveType":"site/sections/Footer.tsx","links":[],"bottomLinks":[],"social":[],"subscribe":{}}
+{
+  "__resolveType": "site/sections/Footer.tsx",
+  "links": [
+    {
+      "items": [
+        {
+          "label": "Instagram",
+          "href": "#"
+        },
+        {
+          "label": "linkedin",
+          "href": "#"
+        },
+        {
+          "label": "Whatsapp",
+          "href": "#"
+        }
+      ],
+      "title": "Midia"
+    }
+  ],
+  "bottomLinks": [
+    {
+      "label": "botao",
+      "href": "#"
+    }
+  ],
+  "social": [
+    {
+      "network": "Instagram",
+      "href": "#"
+    },
+    {
+      "network": "Facebook",
+      "href": "#"
+    },
+    {
+      "network": "Linkedin",
+      "href": "#"
+    },
+    {
+      "network": "Facebook"
+    }
+  ],
+  "subscribe": {
+    "title": "Entre em contato",
+    "description": "(11) 1111-1111",
+    "instructions": "<p>Sao Paulo - Brasil</p>"
+  },
+  "madeWith": {
+    "label": "Siga-nos nas redes sociais"
+  }
+}

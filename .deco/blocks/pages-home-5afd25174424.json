@@ -7,30 +7,121 @@
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p>Click here to tweak this text however you want.</p>",
-      "cta": [],
-      "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
-      "video": "https://assets.decocache.com/nextstorm/e263324e-07ee-4743-af2f-da4e7aa3cfc9/Video-Banner-site-CMLO-home2.mp4"
+      "title": "<p><strong><span style=\"color: rgb(1, 239, 41); font-size: 29pt\">Estratégias de comunicação e marketing que impulsionam o seu negócio.</span></strong></p>",
+      "cta": [
+        {
+          "href": "#",
+          "text": "Botao"
+        }
+      ],
+      "video": "https://assets.decocache.com/nextstorm/e263324e-07ee-4743-af2f-da4e7aa3cfc9/Video-Banner-site-CMLO-home2.mp4",
+      "description": "Descrição aqui"
     },
     {
-      "__resolveType": "site/sections/Logos.tsx"
-    },
-    {
-      "__resolveType": "site/sections/ImageWithParagraph.tsx"
+      "__resolveType": "site/sections/Logos.tsx",
+      "logos": [
+        {
+          "src": "https://assets.decocache.com/nextstorm/573d0ec5-f489-46b0-8e9c-d7e49d22dc70/Screenshot_2.png"
+        },
+        {
+          "src": "https://assets.decocache.com/nextstorm/a3ab96b5-69d5-4303-93a2-5e4472566771/logo-2.png"
+        },
+        {}
+      ],
+      "title": "LOGOS"
     },
     {
       "__resolveType": "site/sections/ImageWithParagraph.tsx",
-      "placement": "right"
+      "description": "Especialistas em identidade visual e tráfego pago, unimos design estratégico e campanhas otimizadas para gerar resultados reais.",
+      "cta": [
+        {
+          "style": "Outline",
+          "href": "#",
+          "text": "botao"
+        }
+      ],
+      "disableSpacing": {
+        "top": true,
+        "bottom": true
+      },
+      "image": "https://assets.decocache.com/nextstorm/31b715e3-fefb-4239-95e7-849a11d8d0a6/Screenshot_1.png",
+      "title": "Branding e Google Ads sob medida para transformar negócios",
+      "tagline": "Impulsione sua marca com performance e criatividade"
     },
     {
-      "__resolveType": "site/sections/BlogPosts.tsx"
+      "__resolveType": "site/sections/ImageWithParagraph.tsx",
+      "placement": "right",
+      "title": "Quem somos?",
+      "description": "No cenário digital, ser apenas mais um não é uma opção. Nós somos a Nexstorm, uma agência especializada em marketing, design e produção audiovisual, pronta para elevar sua marca a outro nível.\n\nAcreditamos que cada negócio tem uma história única para contar, e nosso trabalho é transformar essa história em estratégias visuais e digitais que conectam, engajam e convertem.\n\nCriatividade e Estratégia – Unimos inovação e análise para entregar soluções que fazem a diferença.\n\nFoco em Resultados – Não basta ser bonito, tem que ser eficiente. Cada projeto é guiado por dados e performance.\n\nCompromisso com Sua Marca – Trabalhamos lado a lado com você para potencializar sua presença no mercado.\n\nSe você busca um time que pensa fora da caixa e entrega soluções personalizadas, vamos juntos transformar sua visão em realidade!\n\nFale conosco e descubra como podemos impulsionar o seu negócio.",
+      "image": "https://assets.decocache.com/nextstorm/cf62921e-feff-460b-8c84-3cbfec29c55c/Screenshot_14.png"
+    },
+    {
+      "__resolveType": "site/sections/BlogPosts.tsx",
+      "title": "O que fazemos",
+      "posts": [
+        {
+          "tags": [],
+          "image": "https://assets.decocache.com/nextstorm/5b9dc0c6-535c-4ae9-ba5d-b2613c83e58f/photo-1467232004584-a241de8bcf5d.jpeg",
+          "title": "Rebranding",
+          "date": "#",
+          "excerpt": "#",
+          "author": "#"
+        },
+        {
+          "tags": [],
+          "image": "https://assets.decocache.com/nextstorm/ea5504c5-4c5d-4c1a-8fdf-02c35a4e6e09/photo-1496171367470-9ed9a91ea931.png",
+          "title": "Campanha para empresa X",
+          "author": ".",
+          "excerpt": ".",
+          "date": "."
+        },
+        {
+          "tags": [],
+          "image": "https://assets.decocache.com/nextstorm/57c24ad5-98ca-4583-bcfb-1d86223ee5b4/photo-1579389083078-4e7018379f7e.jpeg",
+          "title": "Audiovisual",
+          "date": ".",
+          "excerpt": ".",
+          "author": "."
+        }
+      ],
+      "description": "Aqui estão nossos serviços"
     },
     {
       "__resolveType": "site/sections/Testimonials.tsx",
-      "arrows": true
+      "arrows": true,
+      "slides": [
+        {}
+      ],
+      "dots": false,
+      "title": "O que dizem nossos clientes"
     },
     {
-      "__resolveType": "site/sections/Faq.tsx"
+      "__resolveType": "site/sections/Faq.tsx",
+      "questions": [
+        {
+          "title": "Quais serviços vocês oferecem?",
+          "answer": "<p>.</p>"
+        },
+        {
+          "title": "Atendem empresas de qualquer porte?",
+          "answer": "<p>.</p>"
+        },
+        {
+          "title": "O que está incluso no serviço de Branding?",
+          "answer": "<p>.</p>"
+        },
+        {
+          "title": "Em quanto tempo verei resultados?",
+          "answer": "<p>.</p>"
+        }
+      ],
+      "cta": {
+        "href": "#",
+        "text": "v",
+        "outline": true
+      },
+      "title": "Tire suas dúvidas mais comuns sobre nossos serviços. Se ainda tiver perguntas, entre em contato com a gente!",
+      "description": "."
     },
     {
       "__resolveType": "Footer"
