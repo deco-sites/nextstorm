@@ -2,13 +2,13 @@ import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
 export interface Post {
-  title: string;
-  author: string;
-  excerpt: string;
-  image: ImageWidget;
-  date: string;
+  title?: string;
+  author?: string;
+  excerpt?: string;
+  image?: ImageWidget;
+  date?: string;
   readingTime?: string;
-  tags: string[];
+  tags?: string[];
 }
 
 export interface Props {
@@ -76,7 +76,7 @@ export default function BlogPosts({
                 width={640}
                 class="w-full object-fit z-10"
                 sizes="(max-width: 640px) 100vw, 30vw"
-                src={post.image}
+                src={post.image ?? ''}
                 alt={post.image}
                 decoding="async"
                 loading="lazy"
