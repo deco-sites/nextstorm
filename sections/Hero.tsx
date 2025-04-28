@@ -16,6 +16,8 @@ interface Card {
  */
   backgroundColor?: string;
   backgroundImage?: ImageWidget;
+  width?: number;
+  height?: number;
   text?: string;
 }
 
@@ -116,7 +118,7 @@ export default function HeroFlats({
                     href={item?.href}
                     target={item?.href.includes("http") ? "_blank" : "_self"}
                     class={`font-normal btn btn-primary ${item.outline && "btn-outline"
-                      } border-[1px] border-solid border-green-600 rounded-xl`}
+                      } border-[1px] border-solid border-[#93C50C] rounded-xl`}
                   >
                     <span>{item?.text}</span>
                     <Icon id="ChevronRight" size={24} strokeWidth={1} />
@@ -128,11 +130,11 @@ export default function HeroFlats({
             <div>
               <ul class="flex justify-center flex-wrap gap-6">
                 {cards?.map((card) => (
-                  <li style={{ background: `${card.backgroundColor}` }} class="bg-green-600 relative p-3 h-[280px] w-[200px] flex items-center justify-center">
-                    {image && (
+                  <li style={{ background: `${card.backgroundColor}` }} class="bg-[#93C50C] relative p-3 h-[280px] w-[200px] flex items-center justify-center">
+                    {card.backgroundImage && (
                       <Image
-                        width={200}
-                        height={280}
+                        width={card.width ?? 200}
+                        height={card.height ?? 280}
                         class="w-full h-full absolute top-0 z-10"
                         src={card.backgroundImage ?? ''}
                         alt={"card background-image"}
@@ -140,7 +142,7 @@ export default function HeroFlats({
                         loading="lazy"
                       />
                     )}
-                    <span class="text-black text-center text-base lg:text-xl relative z-50">{card.text}</span>
+                    {!card.backgroundImage && <span class="text-black text-center text-base lg:text-xl relative z-50">{card.text}</span>}
                   </li>
                 ))}
               </ul>

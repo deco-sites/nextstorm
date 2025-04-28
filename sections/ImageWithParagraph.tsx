@@ -1,4 +1,4 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import type { ImageWidget, VideoWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 
 export interface CTA {
@@ -17,6 +17,7 @@ export interface Props {
   descriptionPlacement?: "left" | "right" | "center" | "justify";
   tagline?: string;
   image?: ImageWidget;
+  video?: VideoWidget;
   placement?: "left" | "right";
   cta?: CTA[];
   disableSpacing?: {
@@ -49,6 +50,7 @@ export default function ImageWithParagraph({
   descriptionPlacement = "left",
   tagline = "Tagline",
   image = DEFAULT_IMAGE,
+  video,
   placement = "left",
   disableSpacing,
   cta = [
@@ -65,16 +67,35 @@ export default function ImageWithParagraph({
           } ${disableSpacing?.bottom ? "" : "pb-12 lg:pb-28"}`}
       >
         <div class="w-full md:w-1/2 border border-secondary rounded-lg overflow-hidden">
-          <Image
-            width={640}
-            height={640}
-            class="object-fit z-10"
-            sizes="(max-width: 640px) 100vw, 30vw"
-            src={image}
-            alt={image}
-            decoding="async"
-            loading="lazy"
-          />
+          {video ? <video
+            loading="eager"
+            autoPlay
+            muted
+            loop
+            id="VideoSection"
+            className={`w-full h-full`}
+          >
+            <source
+              src={video}
+              media="(min-width: 1024px)"
+            />
+            <source
+              src={video}
+              media="(max-width: 1023px)"
+            />
+          </video> :
+            <Image
+              width={640}
+              height={640}
+              class="object-fit z-10"
+              sizes="(max-width: 640px) 100vw, 30vw"
+              src={image}
+              alt={image}
+              decoding="async"
+              loading="lazy"
+            />
+          }
+
         </div>
         <div class="w-full md:w-1/2 space-y-2 md:space-y-4 md:max-w-xl gap-4 z-10">
           <p class="text-sm font-semibold">

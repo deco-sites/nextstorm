@@ -9,7 +9,7 @@ function budgetShow({ video }: Props) {
     return (
         <div id="orcamento" class="bg-black pt-[100px]">
             <div class="max-w-[1024px] mx-auto relative">
-                <h2 class="text-white text-center mb-5 text-3xl lg:text-5xl">Solicite seu<br /> <strong class="text-green-600">orçamento</strong></h2>
+                <h2 class="text-white text-center mb-5 text-3xl lg:text-5xl">Solicite seu<br /> <strong class="text-[#93C50C]">orçamento</strong></h2>
                 <video
                     loading="eager"
                     autoPlay

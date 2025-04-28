@@ -7,7 +7,7 @@
     },
     {
       "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p><strong><span style=\"color: rgb(1, 239, 41); font-size: 29pt\">Estratégias de comunicação e marketing que impulsionam o seu negócio.</span></strong></p>",
+      "title": "<p><strong><span style=\"color: #ffffff; font-size: 29pt\">Estratégias de comunicação e marketing que impulsionam o seu negócio.</span></strong></p>",
       "cta": [
         {
           "href": "#orcamento",
@@ -17,13 +17,18 @@
       "video": "https://assets.decocache.com/nextstorm/e263324e-07ee-4743-af2f-da4e7aa3cfc9/Video-Banner-site-CMLO-home2.mp4",
       "cards": [
         {
-          "text": "MARKETING DIGITAL"
+          "text": "MARKETING DIGITAL",
+          "backgroundImage": "https://assets.decocache.com/nextstorm/8ff7cb65-47f8-47fe-8cea-025420384985/marketing.png",
+          "width": 1017,
+          "height": 2000
         },
         {
-          "text": "DESIGN E CRIAÇÃO"
+          "text": "DESIGN E CRIAÇÃO",
+          "backgroundImage": "https://assets.decocache.com/nextstorm/60791de0-a788-4b55-93a0-eb7eba877fe2/desing.png"
         },
         {
-          "text": "PRODUÇÃO AUDIOVISUAL"
+          "text": "PRODUÇÃO AUDIOVISUAL",
+          "backgroundImage": "https://assets.decocache.com/nextstorm/c3d44f14-b276-40f4-94f1-0287571bdd64/audiovisual.png"
         }
       ]
     },
@@ -48,8 +53,7 @@
         {
           "src": "https://assets.decocache.com/nextstorm/a3ab96b5-69d5-4303-93a2-5e4472566771/logo-2.png"
         }
-      ],
-      "title": "LOGOS"
+      ]
     },
     {
       "__resolveType": "site/sections/ImageWithParagraph.tsx",
@@ -67,7 +71,8 @@
       },
       "image": "https://assets.decocache.com/nextstorm/31b715e3-fefb-4239-95e7-849a11d8d0a6/Screenshot_1.png",
       "title": "Branding e Google Ads sob medida para transformar negócios",
-      "tagline": "Impulsione sua marca com performance e criatividade"
+      "tagline": "Impulsione sua marca com performance e criatividade",
+      "video": "https://assets.decocache.com/nextstorm/f264c695-3645-41ab-a65e-74680c43cdec/video-no-lugar-do-grafico.mp4"
     },
     {
       "__resolveType": "site/sections/ImageWithParagraph.tsx",
@@ -75,7 +80,8 @@
       "title": "Quem somos?",
       "description": "No cenário digital, ser apenas mais um não é uma opção. Nós somos a Nexstorm, uma agência especializada em marketing, design e produção audiovisual, pronta para elevar sua marca a outro nível.\n\nAcreditamos que cada negócio tem uma história única para contar, e nosso trabalho é transformar essa história em estratégias visuais e digitais que conectam, engajam e convertem.\n\nCriatividade e Estratégia – Unimos inovação e análise para entregar soluções que fazem a diferença.\n\nFoco em Resultados – Não basta ser bonito, tem que ser eficiente. Cada projeto é guiado por dados e performance.\n\nCompromisso com Sua Marca – Trabalhamos lado a lado com você para potencializar sua presença no mercado.\n\nSe você busca um time que pensa fora da caixa e entrega soluções personalizadas, vamos juntos transformar sua visão em realidade!\n\nFale conosco e descubra como podemos impulsionar o seu negócio.",
       "image": "https://assets.decocache.com/nextstorm/cf62921e-feff-460b-8c84-3cbfec29c55c/Screenshot_14.png",
-      "id": "quemsomos"
+      "id": "quemsomos",
+      "video": "https://assets.decocache.com/nextstorm/01853e38-c43e-403b-a1e7-7e7a2127dcff/Quem-Somos.mp4"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -129,15 +135,6 @@
         }
       ],
       "description": "Aqui estão nossos serviços"
-    },
-    {
-      "__resolveType": "site/sections/Testimonials.tsx",
-      "arrows": true,
-      "slides": [
-        {}
-      ],
-      "dots": false,
-      "title": "O que dizem nossos clientes"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

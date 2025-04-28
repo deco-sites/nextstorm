@@ -52,14 +52,14 @@ export default function Header({
           <Image src={logo.src || ""} width={100} height={76} alt={logo.alt} />
         </a>
 
-        <div class="hidden items-center justify-between lg:flex w-full">
+        <div class="hidden items-center justify-between lg:flex w-full lg:w-fit">
           <ul class="flex">
             {navigation.links.map((link) => (
               <li>
                 <a
                   href={link.url}
                   aria-label={link.label}
-                  class="link no-underline hover:underline p-4"
+                  class="link no-underline hover:text-[#93C50C] transition-colors duration-300 p-4"
                 >
                   {link.label}
                 </a>
@@ -91,7 +91,7 @@ export default function Header({
       </div>
 
       {/* sidebar */}
-      <aside class="drawer-side z-50">
+      <aside class="drawer-side z-50 lg:hidden">
         {/* Close when clicking on overlay */}
         <label
           htmlFor="mobile-drawer-nav"
