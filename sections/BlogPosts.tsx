@@ -23,38 +23,7 @@ const DEFAULT_IMAGE =
 export default function BlogPosts({
   title = "Here's a component for you to showcase your blogposts",
   description = "This subheading is fully editable, remember?",
-  posts = [
-    {
-      title: "Title of blogpost #1",
-      author: "Name of the author",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-      image: DEFAULT_IMAGE,
-      date: "01 Apr 2024",
-      readingTime: "10 min",
-      tags: ["Tag #1", "Tag #2", "Tag #3"],
-    },
-    {
-      title: "Title of blogpost #2",
-      author: "Name of the author",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-      image: DEFAULT_IMAGE,
-      date: "01 Apr 2024",
-      readingTime: "10 min",
-      tags: ["Tag #1", "Tag #2", "Tag #3"],
-    },
-    {
-      title: "Title of blogpost #3",
-      author: "Name of the author",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-      image: DEFAULT_IMAGE,
-      date: "01 Apr 2024",
-      readingTime: "10 min",
-      tags: ["Tag #1", "Tag #2", "Tag #3"],
-    },
-  ],
+  posts,
 }: Props) {
   return (
     <div id="posts" class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-12 lg:py-28">
@@ -74,9 +43,9 @@ export default function BlogPosts({
             <div class="border border-secondary rounded-lg overflow-hidden">
               <Image
                 width={640}
-                class="w-full object-fit z-10"
+                class="w-full object-fit z-10 lg:min-h-[270px]"
                 sizes="(max-width: 640px) 100vw, 30vw"
-                src={post.image ?? ''}
+                src={post.image ?? DEFAULT_IMAGE}
                 alt={post.image}
                 decoding="async"
                 loading="lazy"
@@ -84,8 +53,8 @@ export default function BlogPosts({
               <div class="p-6 space-y-4">
                 <div class="font-semibold">{post.readingTime}</div>
                 <div class="space-y-2">
-                  <h3 class="text-2xl">{post.title}</h3>
-                  <p class="text-base">{post.excerpt}</p>
+                  {post.title && <h3 class="text-2xl lg:min-h-[64px]">{post.title}</h3>}
+                  {post.excerpt && <p class="text-base">{post.excerpt}</p>}
                 </div>
                 <div class="flex flex-wrap gap-2">
                   {post.tags?.map((tag) => (
@@ -96,7 +65,6 @@ export default function BlogPosts({
                 </div>
                 <div class="flex flex-wrap gap-2">
                   <span>{post.date}</span>
-                  <span>•</span>
                   <span>{post.author}</span>
                 </div>
               </div>

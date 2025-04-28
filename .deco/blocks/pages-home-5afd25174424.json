@@ -58,13 +58,7 @@
     {
       "__resolveType": "site/sections/ImageWithParagraph.tsx",
       "description": "Especialistas em identidade visual e tráfego pago, unimos design estratégico e campanhas otimizadas para gerar resultados reais.",
-      "cta": [
-        {
-          "style": "Outline",
-          "href": "#",
-          "text": "botao"
-        }
-      ],
+      "cta": [],
       "disableSpacing": {
         "top": true,
         "bottom": true
@@ -112,23 +106,18 @@
         {
           "tags": [],
           "image": "https://assets.decocache.com/nextstorm/5b9dc0c6-535c-4ae9-ba5d-b2613c83e58f/photo-1467232004584-a241de8bcf5d.jpeg",
-          "title": "Rebranding"
+          "title": "Rebranding",
+          "author": "oi"
         },
         {
           "tags": [],
           "image": "https://assets.decocache.com/nextstorm/bd834182-a18a-4945-8583-4ed096649c57/pexels-sevenstormphotography-443383.jpg",
-          "title": "Campanha para empresa X",
-          "author": ".",
-          "excerpt": ".",
-          "date": "."
+          "title": "Campanha para empresa X"
         },
         {
           "tags": [],
           "image": "https://assets.decocache.com/nextstorm/a670e8cc-66dc-4602-8d38-e07d0015ae7f/pexels-caique-araujo-101156227-31656366.jpg",
-          "title": "Audiovisual",
-          "date": ".",
-          "excerpt": ".",
-          "author": "."
+          "title": "Audiovisual"
         }
       ],
       "description": "Aqui estão nossos serviços"

@@ -3931,6 +3931,10 @@ details.collapse summary::-webkit-details-marker {
     max-height: 600px;
   }
 
+  .lg\:min-h-\[270px\] {
+    min-height: 270px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }

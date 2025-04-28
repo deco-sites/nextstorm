@@ -53,10 +53,7 @@ export default function ImageWithParagraph({
   video,
   placement = "left",
   disableSpacing,
-  cta = [
-    { id: "change-me-1", href: "/", text: "Change me", style: "Outline" },
-    { id: "change-me-2", href: "/", text: "Change me", style: "Ghost" },
-  ],
+  cta,
   ctaPlacement = "left",
 }: Props) {
   return (
