@@ -24,7 +24,7 @@
     {
       "items": [
         {
-          "label": "<p><strong>São Paulo</strong></p><p><span style=\"color: rgb(199, 199, 199); font-size: 13px\">Av. Paulista, 1374</span><span style=\"color: rgb(199, 199, 199)\"><br>Bela Vista</span></p>"
+          "label": "<p><strong>São Paulo</strong></p><p></p>"
         },
         {
           "label": "<p><strong>Aveiro</strong></p><p><span style=\"color: rgb(199, 199, 199); font-size: 13px\">Av. 25 Abril, 1374</span></p>"
@@ -68,8 +68,8 @@
   },
   "textBelowLogo": [
     {
-      "href": "https://wa.me/5511999999999",
-      "label": "11 9 9999-9999"
+      "href": "https://wa.me/5511951235865",
+      "label": "11 9 51235865"
     }
   ]
 }

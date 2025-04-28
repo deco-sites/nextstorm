@@ -14,7 +14,7 @@
           "text": "Solicite seu orçamento"
         }
       ],
-      "video": "https://assets.decocache.com/nextstorm/e263324e-07ee-4743-af2f-da4e7aa3cfc9/Video-Banner-site-CMLO-home2.mp4",
+      "video": "https://assets.decocache.com/nextstorm/6353a2d2-98a0-4beb-814e-349b6e27bf6e/imagem-de-fundo-2.mp4",
       "cards": [
         {
           "text": "MARKETING DIGITAL",
@@ -87,7 +87,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/OurServices.tsx",
-        "title": "Nossos serviços",
+        "title": "<p style=\"text-align: center\"><span style=\"font-size: 24pt\">Nossos serviços</span></p>",
         "subTitle": "Oferecemos soluções completas para alavancar a presença digital da sua marca. Explore nossos serviços abaixo: ",
         "textItems": [
           {
@@ -112,14 +112,11 @@
         {
           "tags": [],
           "image": "https://assets.decocache.com/nextstorm/5b9dc0c6-535c-4ae9-ba5d-b2613c83e58f/photo-1467232004584-a241de8bcf5d.jpeg",
-          "title": "Rebranding",
-          "date": "#",
-          "excerpt": "#",
-          "author": "#"
+          "title": "Rebranding"
         },
         {
           "tags": [],
-          "image": "https://assets.decocache.com/nextstorm/ea5504c5-4c5d-4c1a-8fdf-02c35a4e6e09/photo-1496171367470-9ed9a91ea931.png",
+          "image": "https://assets.decocache.com/nextstorm/bd834182-a18a-4945-8583-4ed096649c57/pexels-sevenstormphotography-443383.jpg",
           "title": "Campanha para empresa X",
           "author": ".",
           "excerpt": ".",
@@ -127,7 +124,7 @@
         },
         {
           "tags": [],
-          "image": "https://assets.decocache.com/nextstorm/57c24ad5-98ca-4583-bcfb-1d86223ee5b4/photo-1579389083078-4e7018379f7e.jpeg",
+          "image": "https://assets.decocache.com/nextstorm/a670e8cc-66dc-4602-8d38-e07d0015ae7f/pexels-caique-araujo-101156227-31656366.jpg",
           "title": "Audiovisual",
           "date": ".",
           "excerpt": ".",

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexstorm Marketing Digital</title>
+    <style>
+        :root {
+            --primary-green: #00c853;
+            --dark-green: #009624;
+            --light-green: #5efc82;
+            --black: #121212;
+            --dark-gray: #212121;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--black);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--primary-green);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-green);
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background-color: var(--white);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, var(--black), var(--dark-gray));
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            opacity: 0.1;
+            top: -100px;
+            right: -100px;
+            filter: blur(60px);
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            opacity: 0.05;
+            bottom: -50px;
+            left: -50px;
+            filter: blur(40px);
+        }
+        
+        .hero-content {
+            max-width: 600px;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h2 span {
+            color: var(--primary-green);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--light-gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-green);
+            color: var(--black);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-green);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-green);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-green);
+            margin-left: 15px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--dark-gray);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h3 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h3 span {
+            color: var(--primary-green);
+        }
+        
+        .section-title p {
+            color: var(--light-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--black);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--primary-green);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 200, 83, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .service-icon i {
+            color: var(--primary-green);
+            font-size: 24px;
+        }
+        
+        .service-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .learn-more {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .learn-more i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .learn-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: var(--black);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .about-image::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 200, 83, 0.3), transparent);
+            z-index: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-content h3 span {
+            color: var(--primary-green);
+        }
+        
+        .about-content p {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--dark-gray);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background-color: var(--black);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .client-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid var(--primary-green);
+        }
+        
+        .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card p::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 60px;
+            color: rgba(0, 200, 83, 0.1);
+            z-index: -1;
+        }
+        
+        .client-info h5 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .client-info span {
+            color: var(--primary-green);
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background-color: var(--black);
+            text-align: center;
+        }
+        
+        .cta h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta h3 span {
+            color: var(--primary-green);
+        }
+        
+        .cta p {
+            color: var(--light-gray);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Contact Form */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--dark-gray);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info h3 span {
+            color: var(--primary-green);
+        }
+        
+        .contact-info p {
+            color: var(--light-gray);
+            margin-bottom: 30px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 200, 83, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .contact-icon i {
+            color: var(--primary-green);
+        }
+        
+        .contact-text h6 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-green);
+            color: var(--black);
+        }
+        
+        .contact-form {
+            background-color: var(--black);
+            border-radius: 10px;
+            padding: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--dark-gray);
+            border: 1px solid #333;
+            border-radius: 5px;
+            color: var(--white);
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+        
+        textarea.form-control {
+            height: 120px;
+            resize: none;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-green);
+            color: var(--black);
+            border: none;
+            padding: 14px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--dark-green);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            padding: 50px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h5 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h5::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--primary-green);
+        }
+        
+        .footer-col p {
+            color: var(--light-gray);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            font-size: 0.9rem;
+            color: var(--light-gray);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: var(--black);
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+                transition: 0.5s;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Nex<span>storm</span></h1>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre nós</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="color-green" presença digital com></h2> <span>estratégias inovadoras</span></h2>
+                <p>Impulsione seu negócio com nossas soluções de marketing digital personalizadas para o crescimento da sua marca.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Fale Conosco</a>
+                    <a href="#services" class="btn btn-outline">Nossos Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h3>Nossos <span>Serviços</span></h3>
+                <p>Oferecemos soluções completas de marketing digital para elevar sua marca ao próximo nível</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i>🔍</i>
+                    </div>
+                    <h4>SEO</h4>
+                    <p>Otimizamos seu site para os motores de busca, aumentando sua visibilidade e trazendo tráfego qualificado.</p>
+                    <a href="#" class="learn-more">Saiba mais <i>→</i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i>📱</i>
+                    </div>
+                    <h4>Mídias Sociais</h4>
+                    <p>Gerenciamos suas redes sociais com estratégias personalizadas para engajar seu público e converter seguidores em clientes.</p>
+                    <a href="#" class="learn-more">Saiba mais <i>→</i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i>📊</i>
+                    </div>
+                    <h4>Google Ads</h4>
+                    <p>Criamos campanhas otimizadas para maximizar seu ROI e atrair clientes potenciais no momento certo.</p>
+                    <a href="#" class="learn-more">Saiba mais <i>→</i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i>✏️</i>
+                    </div>
+                    <h4>Marketing de Conteúdo</h4>
+                    <p>Desenvolvemos conteúdos relevantes que atraem, engajam e convertem seu público-alvo em todas as etapas da jornada.</p>
+                    <a href="#" class="learn-more">Saiba mais <i>→</i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i>💻</i>
+                    </div>
+                    <h4>Desenvolvimento Web</h4>
+                    <p>Criamos sites modernos, responsivos e otimizados para conversão, proporcionando a melhor experiência aos usuários.</p>
+                    <a href="#" class="learn-more">Saiba mais <i>→</i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i>📈</i>
+                    </div>
+                    <h4>Análise de Dados</h4>
+                    <p>Analisamos métricas importantes para otimizar estratégias e maximizar resultados com decisões baseadas em dados.</p>
+                    <a href="#" class="learn-more">Saiba mais <i>→</i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="/api/placeholder/600/400" alt="Equipe Nexstorm">
+                </div>
+                <div class="about-content">
+                    <h3>Somos a <span>Nexstorm</span></h3>
+                    <p>Somos uma agência de marketing digital apaixonada por transformar negócios através de estratégias inovadoras e resultados mensuráveis.</p>
+                    <p>Nossa equipe é formada por especialistas em diversas áreas do marketing digital, sempre atualizados com as últimas tendências e tecnologias para oferecer as melhores soluções para nossos clientes.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h4>150+</h4>
+                            <p>Clientes Satisfeitos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>98%</h4>
+                            <p>Taxa de Retenção</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5+</h4>
+                            <p>Anos de Experiência</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h3>O que nossos <span>clientes</span> dizem</h3>
+                <p>Confira os depoimentos de quem já transformou seu negócio com a Nexstorm</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="client-image">
+                        <img src="/api/placeholder/80/80" alt="Cliente">
+                    </div>
+                    <p>"A equipe da Nexstorm revolucionou nossa presença digital. Nossas conversões aumentaram 150% em apenas 3 meses de trabalho!"</p>
+                    <div class="client-info">
+                        <h5>Ana Carolina Silva</h5>
+                        <span>CEO, TechSolutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h3>Pronto para <span>transformar</span> seu negócio?</h3>
+            <p>Entre em contato conosco hoje mesmo e descubra como podemos ajudar sua marca a alcançar novos patamares no mundo digital.</p>
+            <a href="#contact" class="btn">Fale com um especialista</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Entre em <span>contato</span></h3>
+                    <p>Estamos prontos para atender você e entender as necessidades do seu negócio. Preencha o formulário ou utilize um de nossos canais de atendimento.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i>📞</i>
+                            </div>
+                            <div class="contact-text">
+                                <h6>Telefone</h6>
+                                <p>(11) 3456-7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i>✉️</i>
+                            </div>
+                            <div class="contact-text">
+                                <h6>Email</h6>
+                                <p>contato@nexstorm.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i>📍</i>
+                            </div>
+                            <div class="contact-text">
+                                <h6>Endereço</h6>
+                                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i>fb</i></a>
+                        <a href="#"><i>ig</i></a>
+                        <a href="#"><i>in</i></a>
+                        <a href="#"><i>tw</i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h1>Nex<span style="color: #00c853;">storm</span></h1>
+                    <p>Transformando negócios através do marketing digital com estratégias inovadoras e resultados mensuráveis.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Links Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre nós</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Serviços</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Mídias Sociais</a></li>
+                        <li
