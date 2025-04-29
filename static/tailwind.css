@@ -3512,6 +3512,9 @@ details.collapse summary::-webkit-details-marker {
 .pt-\[100px\] {
   padding-top: 100px;
 }
+.pt-\[140px\] {
+  padding-top: 140px;
+}
 .text-left {
   text-align: left;
 }
@@ -3935,6 +3938,10 @@ details.collapse summary::-webkit-details-marker {
     min-height: 270px;
   }
 
+  .lg\:min-h-\[64px\] {
+    min-height: 64px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -4023,6 +4030,10 @@ details.collapse summary::-webkit-details-marker {
 
   .lg\:pb-28 {
     padding-bottom: 7rem;
+  }
+
+  .lg\:pt-24 {
+    padding-top: 6rem;
   }
 
   .lg\:pt-28 {
