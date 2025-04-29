@@ -86,15 +86,15 @@
         "textItems": [
           {
             "title": "Marketing Digital",
-            "context": "Teste"
+            "context": "<p><strong><span style=\"font-size: 16pt\">✔ Análise de Concorrentes – Entenda o mercado e se diferencie da concorrência.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Gestão de Redes Sociais – Criamos conteúdos estratégicos para engajar seu público.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Estratégia de Engajamento – Atraímos e fidelizamos clientes com ações eficazes.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Definição de Persona (Público-Alvo) – Falamos diretamente com quem realmente importa.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Copywriting Persuasivo – Textos envolventes que vendem sua marca.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Campanhas Pagas (Meta Ads / Google Ads) – Alcance as pessoas certas no momento certo.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Monitoramento de KPI’s – Acompanhamos métricas para otimizar seus resultados.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Retail Media – Estratégias para impulsionar suas vendas no varejo digital.</span></strong></p><p></p>"
           },
           {
             "title": "Design e Criação",
-            "context": "Teste2"
+            "context": "<p><strong><span style=\"font-size: 16pt\">✔ Artes Gráficas – Designs modernos para redes sociais e materiais digitais.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Identidade Visual – Cores, tipografia e elementos que fortalecem sua marca.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Desenvolvimento de Logotipo – Símbolos marcantes para sua identidade profissional.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Artes Impressas – Materiais gráficos de alta qualidade para qualquer necessidade.</span></strong></p><p></p>"
           },
           {
             "title": "Produção Audiovisual",
-            "context": "Test3"
+            "context": "<p><strong><span style=\"font-size: 16pt\">✔ Edição de Vídeo – Transformamos imagens em narrativas envolventes.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Animações Profissionais – Movimentos criativos que dão vida ao&nbsp;seu&nbsp;conteúdo.</span></strong></p>"
           }
         ]
       }
@@ -107,17 +107,19 @@
           "tags": [],
           "image": "https://assets.decocache.com/nextstorm/5b9dc0c6-535c-4ae9-ba5d-b2613c83e58f/photo-1467232004584-a241de8bcf5d.jpeg",
           "title": "Rebranding",
-          "author": "oi"
+          "excerpt": "Atualização da Identidade Visual: Modificação ou redesign dos elementos visuais existentes para refletir a nova direção da marca."
         },
         {
           "tags": [],
           "image": "https://assets.decocache.com/nextstorm/bd834182-a18a-4945-8583-4ed096649c57/pexels-sevenstormphotography-443383.jpg",
-          "title": "Campanha para empresa X"
+          "title": "Campanhas para empresas",
+          "excerpt": "Campanhas para empresas: Impulsione suas iniciativas empresariais com campanhas focadas em metas, alcançando clientes e parceiros de forma eficiente."
         },
         {
           "tags": [],
           "image": "https://assets.decocache.com/nextstorm/a670e8cc-66dc-4602-8d38-e07d0015ae7f/pexels-caique-araujo-101156227-31656366.jpg",
-          "title": "Audiovisual"
+          "title": "Audiovisual",
+          "excerpt": "Através de vídeos estratégicos e design em movimento, reforçamos sua mensagem, potencializamos conversões e consolidamos a fidelidade do seu público."
         }
       ],
       "description": "Aqui estão nossos serviços"
@@ -164,7 +166,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/WhatsApp.tsx",
-        "phone": 22999999
+        "phone": 11951235865
       }
     }
   ],

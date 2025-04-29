@@ -24,10 +24,10 @@
     {
       "items": [
         {
-          "label": "<p><strong>São Paulo</strong></p><p></p>"
+          "label": "<p><strong>São Paulo - SP</strong></p><p></p>"
         },
         {
-          "label": "<p><strong>Aveiro</strong></p><p><span style=\"color: rgb(199, 199, 199); font-size: 13px\">Av. 25 Abril, 1374</span></p>"
+          "label": "<p></p>"
         }
       ]
     }
