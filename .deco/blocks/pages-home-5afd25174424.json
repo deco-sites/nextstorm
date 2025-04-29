@@ -14,7 +14,7 @@
           "text": "Solicite seu orçamento"
         }
       ],
-      "video": "https://assets.decocache.com/nextstorm/6353a2d2-98a0-4beb-814e-349b6e27bf6e/imagem-de-fundo-2.mp4",
+      "video": "https://assets.decocache.com/nextstorm/4f03b24a-5fa0-400c-b2bc-de2c8e256a4d/imagem-de-fundo.mp4",
       "cards": [
         {
           "text": "MARKETING DIGITAL",
@@ -75,7 +75,8 @@
       "description": "No cenário digital, ser apenas mais um não é uma opção. Nós somos a Nexstorm, uma agência especializada em marketing, design e produção audiovisual, pronta para elevar sua marca a outro nível.\n\nAcreditamos que cada negócio tem uma história única para contar, e nosso trabalho é transformar essa história em estratégias visuais e digitais que conectam, engajam e convertem.\n\nCriatividade e Estratégia – Unimos inovação e análise para entregar soluções que fazem a diferença.\n\nFoco em Resultados – Não basta ser bonito, tem que ser eficiente. Cada projeto é guiado por dados e performance.\n\nCompromisso com Sua Marca – Trabalhamos lado a lado com você para potencializar sua presença no mercado.\n\nSe você busca um time que pensa fora da caixa e entrega soluções personalizadas, vamos juntos transformar sua visão em realidade!\n\nFale conosco e descubra como podemos impulsionar o seu negócio.",
       "image": "https://assets.decocache.com/nextstorm/cf62921e-feff-460b-8c84-3cbfec29c55c/Screenshot_14.png",
       "id": "quemsomos",
-      "video": "https://assets.decocache.com/nextstorm/01853e38-c43e-403b-a1e7-7e7a2127dcff/Quem-Somos.mp4"
+      "video": "https://assets.decocache.com/nextstorm/01853e38-c43e-403b-a1e7-7e7a2127dcff/Quem-Somos.mp4",
+      "tagline": " "
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
