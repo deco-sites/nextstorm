@@ -11,7 +11,7 @@ interface Props {
 
 export default function Section({ name = "Capy", color = "green" }: Props) {
   return (
-    <div class={"bg-" + color + "-200 p-8 rounded-md shadow-md text-white"}>
+    <div class={"bg-" + color + "-200 p-8 rounded-md shadow-md text-red-500"}>
       <h2 class="text-2xl font-semibold mb-4">Fancy Component</h2>
       <div class="space-y-4">
         <button class={"btn btn-" + color}>Click me</button>

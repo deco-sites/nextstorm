@@ -14,7 +14,7 @@
           "text": "Solicite seu orçamento"
         }
       ],
-      "video": "https://assets.decocache.com/nextstorm/2cd63197-adb2-44ac-8d10-045c414dec62/Composicao-1.mp4",
+      "video": "https://assets.decocache.com/nextstorm/748d6963-c862-4b3d-9256-aad6c641ecb1/92266-634052242_medium.mp4",
       "cards": [
         {
           "text": "MARKETING DIGITAL",
@@ -83,11 +83,11 @@
       "section": {
         "__resolveType": "site/sections/OurServices.tsx",
         "title": "<p style=\"text-align: center\"><span style=\"font-size: 24pt\">Nossos serviços</span></p>",
-        "subTitle": "Oferecemos soluções completas para alavancar a presença digital da sua marca. Explore nossos serviços abaixo: ",
+        "subTitle": "<p>Oferecemos soluções completas para alavancar a presença digital da sua marca. Explore nossos serviços abaixo:</p>",
         "textItems": [
           {
             "title": "Marketing Digital",
-            "context": "<p><strong><span style=\"font-size: 16pt\">✔ Análise de Concorrentes – Entenda o mercado e se diferencie da concorrência.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Gestão de Redes Sociais – Criamos conteúdos estratégicos para engajar seu público.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Estratégia de Engajamento – Atraímos e fidelizamos clientes com ações eficazes.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Definição de Persona (Público-Alvo) – Falamos diretamente com quem realmente importa.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Copywriting Persuasivo – Textos envolventes que vendem sua marca.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Campanhas Pagas (Meta Ads / Google Ads) – Alcance as pessoas certas no momento certo.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Monitoramento de KPI’s – Acompanhamos métricas para otimizar seus resultados.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Retail Media – Estratégias para impulsionar suas vendas no varejo digital.</span></strong></p><p></p>"
+            "context": "<p><strong><em><span style=\"font-size: 16pt\">✔ Análise de Concorrentes – Entenda o mercado e se diferencie da concorrência.</span></em></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Gestão de Redes Sociais – Criamos conteúdos estratégicos para engajar seu público.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Estratégia de Engajamento – Atraímos e fidelizamos clientes com ações eficazes.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Definição de Persona (Público-Alvo) – Falamos diretamente com quem realmente importa.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Copywriting Persuasivo – Textos envolventes que vendem sua marca.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Campanhas Pagas (Meta Ads / Google Ads) – Alcance as pessoas certas no momento certo.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Monitoramento de KPI’s – Acompanhamos métricas para otimizar seus resultados.</span></strong></p><p><strong><span style=\"font-size: 16pt\">✔ Retail Media – Estratégias para impulsionar suas vendas no varejo digital.</span></strong></p><p></p>"
           },
           {
             "title": "Design e Criação",

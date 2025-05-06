@@ -2848,6 +2848,9 @@ details.collapse summary::-webkit-details-marker {
 .mt-4 {
   margin-top: 1rem;
 }
+.mt-\[100px\] {
+  margin-top: 100px;
+}
 .mt-\[5px\] {
   margin-top: 5px;
 }
@@ -3512,8 +3515,8 @@ details.collapse summary::-webkit-details-marker {
 .pt-\[100px\] {
   padding-top: 100px;
 }
-.pt-\[140px\] {
-  padding-top: 140px;
+.pt-\[144px\] {
+  padding-top: 144px;
 }
 .text-left {
   text-align: left;
@@ -3662,6 +3665,10 @@ details.collapse summary::-webkit-details-marker {
 .text-primary {
   --tw-text-opacity: 1;
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 .text-secondary {
   --tw-text-opacity: 1;
@@ -4030,10 +4037,6 @@ details.collapse summary::-webkit-details-marker {
 
   .lg\:pb-28 {
     padding-bottom: 7rem;
-  }
-
-  .lg\:pt-24 {
-    padding-top: 6rem;
   }
 
   .lg\:pt-28 {
