@@ -14,7 +14,7 @@
           "text": "Solicite seu orçamento"
         }
       ],
-      "video": "https://assets.decocache.com/nextstorm/748d6963-c862-4b3d-9256-aad6c641ecb1/92266-634052242_medium.mp4",
+      "video": "https://assets.decocache.com/nextstorm/8f3560c3-7229-4cfb-963a-7f8081cfc812/92266-634052242_medium1.mp4",
       "cards": [
         {
           "text": "MARKETING DIGITAL",
@@ -83,7 +83,7 @@
       "section": {
         "__resolveType": "site/sections/OurServices.tsx",
         "title": "<p style=\"text-align: center\"><span style=\"font-size: 24pt\">Nossos serviços</span></p>",
-        "subTitle": "<p>Oferecemos soluções completas para alavancar a presença digital da sua marca. Explore nossos serviços abaixo:</p>",
+        "subTitle": "<p style=\"text-align: center\">Oferecemos soluções completas para alavancar a presença digital da sua marca. Explore nossos serviços abaixo:</p>",
         "textItems": [
           {
             "title": "Marketing Digital",
