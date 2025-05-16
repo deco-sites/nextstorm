@@ -75,7 +75,7 @@ export default function HeroFlats({
         />
       </video>
       }
-      <div class="lg:container lg:mx-auto mx-4 flex flex-col items-center gap-8">
+      <div class="lg:container xl:max-w-[1536px] lg:mx-auto mx-4 flex flex-col items-center gap-8">
         <div
           class={`flex w-full xl:container xl:mx-auto py-24 pt-[144px] mx-5 md:mx-10 z-10 mt-[100px] ${image
             ? PLACEMENT[placement]

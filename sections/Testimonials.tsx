@@ -197,7 +197,7 @@ function Carousel(props: Props) {
   return (
     <div
       id={id}
-      class="min-h-min flex flex-col lg:container md:max-w-6xl lg:mx-auto mx-4 py-12 lg:py-28"
+      class="min-h-min flex flex-col lg:container xl:max-w-[1536px] md:max-w-6xl lg:mx-auto mx-4 py-12 lg:py-28"
     >
       <h2 class="text-4xl leading-snug lg:w-1/2 pb-12 lg:pb-16">
         {title}

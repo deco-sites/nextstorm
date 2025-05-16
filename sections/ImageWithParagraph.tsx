@@ -57,7 +57,7 @@ export default function ImageWithParagraph({
   ctaPlacement = "left",
 }: Props) {
   return (
-    <div id={id} class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm">
+    <div id={id} class="lg:container xl:max-w-[1536px] md:max-w-6xl lg:mx-auto mx-4 text-sm">
       <div
         class={`flex ${PLACEMENT[placement]
           } gap-12 md:gap-20 text-left items-center z-10 ${disableSpacing?.top ? "" : "pt-12 lg:pt-28"
